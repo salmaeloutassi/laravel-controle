@@ -26,7 +26,7 @@ class EventController extends Controller
         $eve->end_date = $request->end_date;
         $eve->price=$request->price;
         $eve->save();    
-        flashy()->success("Le produit a été crier avec succés");
+        flashy()->success("L'evenement a été crier avec succés");
         return redirect()-> route('eventList');
     }
     public function eventList(){
@@ -59,7 +59,7 @@ class EventController extends Controller
     public function delete_event($id)
     {
         Event::destroy($id);
-        flashy()->success("Le produit a été supprimé avec succès");
+        flashy()->success("L'evenement a été supprimé avec succès");
         return redirect()->route('eventList');
     }
 }
