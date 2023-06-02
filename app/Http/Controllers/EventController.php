@@ -39,13 +39,7 @@ class EventController extends Controller
         return view('events.edit', compact('event'));
     }
     public function update_event(Request $request, $id){
-        // $request->validate([
-        //     'title' => 'required|min:3',
-        //     'description' => 'required|min:3',
-        //     'start_date' => 'required',
-        //     'end_date' => 'required' ,
-        //     'price' => 'required',
-        // ]);
+       
         $event =Event::findOrFail($id);
         $event->title = $request->input('title'); 
         $event->description = $request->input('description');
